@@ -43,6 +43,16 @@ Product concepts in this directory do not authorize production implementation by
    - Source Journey integrity;
    - DCM TestSlip example.
 
+## Derived working plan
+
+[DEV8STUDIO-SITE-WORK-PLAN-AND-SCOPE.md](./DEV8STUDIO-SITE-WORK-PLAN-AND-SCOPE.md)
+
+- consolidated digest of the documents above;
+- scope definition (in / out / boundary);
+- work plan, gates, evidence, and traceability back to each source document.
+
+It is a Working Plan, not Governance, and it does not authorize implementation.
+
 ## MVP V1 in one picture
 
 ```
