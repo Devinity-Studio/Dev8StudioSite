@@ -1,0 +1,42 @@
+name: Documentation checks
+
+# This repository is documentation only, so the checks that keep it correct are
+# about the documents themselves: link targets, file encoding, and whether the
+# section references the documents make to each other still resolve.
+#
+# The checks live in scripts/docs-checks.sh so they can be run locally with the
+# same command CI uses:  bash scripts/docs-checks.sh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.md'
+      - 'scripts/docs-checks.sh'
+      - '.github/workflows/docs-checks.yml'
+  pull_request:
+    paths:
+      - '**.md'
+      - 'scripts/docs-checks.sh'
+      - '.github/workflows/docs-checks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs-checks:
+    name: Markdown links, encoding, section references
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run documentation checks
+        run: bash scripts/docs-checks.sh
