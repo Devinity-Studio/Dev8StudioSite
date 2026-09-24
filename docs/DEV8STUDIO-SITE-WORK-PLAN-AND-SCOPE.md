@@ -50,7 +50,7 @@
 
 ### 1.2 สาระสำคัญที่ต้องจำจากแต่ละกลุ่ม
 
-**กลุ่ม Concept (1, 3, 9)**
+**กลุ่ม Concept (1, 9)**
 - ลูกค้าไม่ต้องรู้คำศัพท์เทคนิค — เล่าปัญหา แล้วระบบช่วยจัดโครงสร้าง
 - Requirement เกิดขึ้นได้ตรงจุดที่ลูกค้ากำลังทดลอง ไม่ต้องเริ่มที่ Wizard เสมอ
 - `Playground = Product Experience + Requirement Discovery`
@@ -74,22 +74,24 @@
 
 ## 2. ข้อเท็จจริงที่ล็อกแล้ว (Non-negotiables)
 
-ข้อกำหนดเหล่านี้มีที่มาในเอกสารที่อนุมัติแล้ว และ **ไม่ใช่ทางเลือก**ในการทำงาน
+ข้อกำหนดเหล่านี้เป็นข้อบังคับของแผนนี้ และรวบรวมจากเอกสารต้นทางใน repository โดยระบุที่มาท้ายแต่ละข้อ
 
-1. **Source Journey เป็น immutable** และแยกออกจาก **Selected Context** ที่เปลี่ยนได้
-2. **Lifecycle Status ≠ Demo Availability** — ห้ามใช้แทนกัน
-3. **V1 มี Active Selected Context ได้หนึ่งรายการ**
-4. การเปลี่ยน Role/View ต้อง **เพิ่ม** บริบท ไม่ใช่เขียนทับของเดิม
-5. **Confirmation Snapshot** ต้องไม่เปลี่ยนหลังการยอมรับ submission
-6. **Receipt Identifier** ต้องเป็น opaque และ non-sequential — และ Receipt ไม่ใช่ Authentication
-7. **Consent** ต้อง required, ห้าม pre-select, มี policy link, และ backend ต้องเก็บ Policy Version + Timestamp; Marketing Consent แยกจาก Core Consent
-8. **Domain rule ต้องมีนิยาม canonical เดียว** — ใช้ CTA Resolver / Contact Intent Configuration / Contact Form กลาง ไม่ทำซ้ำ
-9. **Truthfulness** — ไม่มีข้อมูลจริง = ไม่แสดง (ห้ามสร้าง Customer Count, User Count, Revenue, Testimonial, Metric, SLA, Response Time, Demo/Product Availability, Case Study Result)
-10. **Browser ห้ามเข้าถึง Production Database โดยตรง** และ Secret อยู่ฝั่ง Server เท่านั้น
-11. **Production PII ห้ามอยู่ใน Local / Preview / Test**
-12. **Logs ห้ามมี Full Submission หรือ PII**; Notification เป็น metadata-only และไม่ใช่ System of Record
-13. **ห้ามใช้ Placeholder Privacy Policy ใน Production**
-14. **AI V1 ห้ามส่ง Problem Description ไปยัง AI Provider** โดยไม่มี Privacy/Contract Approval แยก
+เอกสารนี้ **ไม่ได้ตัดสินสถานะการอนุมัติของข้อใด** — สถานะอำนาจของเอกสารต้นทางดูได้จาก §1.1 และ Governance Documents ยังคงเป็น Source of Truth
+
+1. **Source Journey เป็น immutable** และแยกออกจาก **Selected Context** ที่เปลี่ยนได้ — *ที่มา: `AGENT-HANDOFF.md` §5 · `README.md` §19*
+2. **Lifecycle Status ≠ Demo Availability** — ห้ามใช้แทนกัน — *ที่มา: `AGENT-HANDOFF.md` §5 · `README.md` §13*
+3. **V1 มี Active Selected Context ได้หนึ่งรายการ** — *ที่มา: `AGENT-HANDOFF.md` §5 · `README.md` §19*
+4. การเปลี่ยน Role/View ต้อง **เพิ่ม** บริบท ไม่ใช่เขียนทับของเดิม — *ที่มา: `README.md` §19 · `BRM-CONTEXTUAL-REQUIREMENT-JOURNEY.md` · `BRM-MVP-V1-IMPLEMENTATION.md` §4*
+5. **Confirmation Snapshot** ต้องไม่เปลี่ยนหลังการยอมรับ submission — *ที่มา: `AGENT-HANDOFF.md` §5 · `README.md` §20*
+6. **Receipt Identifier** ต้องเป็น opaque และ non-sequential — และ Receipt ไม่ใช่ Authentication — *ที่มา: `AGENT-HANDOFF.md` §5 · `README.md` §20*
+7. **Consent** ต้อง required, ห้าม pre-select, มี policy link, และ backend ต้องเก็บ Policy Version + Timestamp; Marketing Consent แยกจาก Core Consent — *ที่มา: `AGENT-HANDOFF.md` §5 · `README.md` §18*
+8. **Domain rule ต้องมีนิยาม canonical เดียว** — ใช้ CTA Resolver / Contact Intent Configuration / Contact Form กลาง ไม่ทำซ้ำ — *ที่มา: `README.md` §17 · `AGENT-HANDOFF.md` §5*
+9. **Truthfulness** — ไม่มีข้อมูลจริง = ไม่แสดง (ห้ามสร้าง Customer Count, User Count, Revenue, Testimonial, Metric, SLA, Response Time, Demo/Product Availability, Case Study Result) — *ที่มา: `README.md` §30*
+10. **Browser ห้ามเข้าถึง Production Database โดยตรง** และ Secret อยู่ฝั่ง Server เท่านั้น — *ที่มา: `AGENT-HANDOFF.md` §6 · `README.md` §31*
+11. **Production PII ห้ามอยู่ใน Local / Preview / Test** — *ที่มา: `AGENT-HANDOFF.md` §7*
+12. **Logs ห้ามมี Full Submission หรือ PII**; Notification เป็น metadata-only และไม่ใช่ System of Record — *ที่มา: `AGENT-HANDOFF.md` §7*
+13. **ห้ามใช้ Placeholder Privacy Policy ใน Production** — *ที่มา: `README.md` §18 · `AGENT-HANDOFF.md` §7*
+14. **AI V1 ห้ามส่ง Problem Description ไปยัง AI Provider** โดยไม่มี Privacy/Contract Approval แยก — *ที่มา: `README.md` §33 · `AGENT-HANDOFF.md` §7*
 
 ---
 
@@ -124,7 +126,7 @@
 
 `docs/MVP-V1-WORKING-SET.md` ระบุชัดว่า repository ปัจจุบันเป็น **Product / Website Concept repository ไม่ใช่ verified application runtime**
 
-→ ดังนั้น work planต้องเริ่มด้วย **Reconcile** ก่อนเขียนโค้ด และ **ห้ามอ้างว่ามี production application ที่ทำงานได้** จนกว่าจะ verify scaffold, runtime, tests, persistence และ customer journey จริง
+→ ดังนั้น work plan ต้องเริ่มด้วย **Reconcile** ก่อนเขียนโค้ด และ **ห้ามอ้างว่ามี production application ที่ทำงานได้** จนกว่าจะ verify scaffold, runtime, tests, persistence และ customer journey จริง
 
 ---
 
