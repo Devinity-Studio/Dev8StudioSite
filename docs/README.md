@@ -35,3 +35,7 @@ Preparation may continue where permitted, but preparation is not authorization.
 
 - `governance/README.md` — Governance document index and status boundary.
 - `agent-handoff/AGENT-HANDOFF.md` — current Agent Context Handoff.
+- `MVP-V1-WORKING-SET.md` — MVP V1 working design set index.
+- `DEV8STUDIO-SITE-WORK-PLAN-AND-SCOPE.md` — consolidated work plan and scope definition (Working Plan, not Governance).
+- `DEV8STUDIO-SITE-MVP-V1-PLAN.md` — MVP V1 implementation sequence and Gate strategy.
+- `BRM-MVP-V1-IMPLEMENTATION.md` — MVP V1 implementation blueprint and contracts.
