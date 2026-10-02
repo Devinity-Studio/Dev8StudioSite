@@ -1,6 +1,12 @@
-# Dev8StudioSite + BRM — MVP V1 Plan
+# Dev8StudioSite + BRM — MVP V1 Plan (Superseded)
 
-> Implementation planning document — not Governance
+> Historical implementation planning document — not Governance
+
+> **Status (2026-10-02): SUPERSEDED as First Priority.**
+>
+> The site remains a public product gateway, while BRM's current first priority is the internal Operations Core described in `BRM-MVP-V2-OPERATIONS-CORE.md`.
+>
+> The customer-facing Requirement Wizard / Playground / Contextual Requirement Capture plan remains a future BRM layer and must be reconciled before being reactivated.
 
 ## Strategic Decision
 
