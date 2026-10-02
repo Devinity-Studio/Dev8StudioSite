@@ -1,117 +1,100 @@
-# Dev8StudioSite + BRM — MVP V1 Working Set
+# Dev8StudioSite + BRM — Working Set
 
-This directory is the working design set for the first Dev8StudioSite MVP.
+## Strategic Priority Reset — 2026-10-02
+
+The BRM First Priority has changed.
+
+> **BRM Operations Core comes first.**
+
+BRM is initially an internal tool for Dev8Studio to monitor, understand, operate, and continuously improve launched products through **Human ↔ AI** collaboration.
+
+The primary human user is the Dev8Studio owner / operator.
+
+The current BRM MVP is:
+
+**docs/BRM-MVP-V2-OPERATIONS-CORE.md**
+
+The previous customer-facing Requirement Management MVP is preserved as a later BRM layer and is **not the current implementation priority**.
 
 ## Source-of-truth boundaries
 
 - **Governance** — implementation authority and approved scope.
-- **Dev8StudioSite Product Concept** — product direction.
+- **BRM Operations Core** — current working priority.
+- **Customer Requirement documents** — future BRM layer / historical design.
 - **BRM Context / Idea Layer** — ideas and context that are still forming.
 - **Structured BRM** — promoted, reviewable, traceable records.
-- **GitHub** — external repository, code/history, and project collaboration surface according to integration contracts.
+- **GitHub** — external repository, code/history, and collaboration surface according to integration contracts.
 
-Product concepts in this directory do not authorize production implementation by themselves.
+Product concepts and working plans do not authorize Production implementation by themselves.
 
-## MVP V1 documents
+## Current Working Documents
 
-1. [BRM-MVP-V1-IMPLEMENTATION.md](./BRM-MVP-V1-IMPLEMENTATION.md)
-   - exact MVP boundary;
-   - implementation architecture;
-   - contracts;
-   - DCM Playground scenario;
-   - acceptance journey;
-   - evidence gates.
+1. BRM-MVP-V2-OPERATIONS-CORE.md — current First Priority and MVP boundary.
+2. BRM-2-LAYER-CONTEXT-STRUCTURE.md — Context / Idea Layer, Structured BRM, promotion boundary, bounded AI Context, and external-tool relationship.
+3. BRM-SEEDS-POST-MVP.md — future capabilities after Operations Core is proven.
+4. BRM-MVP-V1-IMPLEMENTATION.md — superseded customer-facing MVP design, retained as historical/future-layer reference.
+5. BRM-CONTEXTUAL-REQUIREMENT-JOURNEY.md — future BRM layer for Playground-driven Requirement Discovery and Contextual Capture.
+6. DEV8STUDIO-SITE-MVP-V1-PLAN.md — superseded sequencing plan, retained for reconciliation.
+7. DEV8STUDIO-SITE-WORK-PLAN-AND-SCOPE.md — consolidated historical working plan; must be reconciled before being treated as current scope.
 
-2. [DEV8STUDIO-SITE-MVP-V1-PLAN.md](./DEV8STUDIO-SITE-MVP-V1-PLAN.md)
-   - implementation sequence;
-   - dependency order;
-   - Gate strategy;
-   - launch success criteria.
-
-3. [BRM-2-LAYER-CONTEXT-STRUCTURE.md](./BRM-2-LAYER-CONTEXT-STRUCTURE.md)
-   - Context / Idea Layer;
-   - Structured BRM Layer;
-   - promotion boundary;
-   - Super Brain boundary;
-   - Context Snapshot;
-   - GitHub / external-tool relationship.
-
-4. [BRM-CONTEXTUAL-REQUIREMENT-JOURNEY.md](./BRM-CONTEXTUAL-REQUIREMENT-JOURNEY.md)
-   - Playground-driven Requirement Discovery;
-   - contextual capture;
-   - Requirement Set;
-   - Source Journey integrity;
-   - DCM TestSlip example.
-
-## Derived working plan
-
-[DEV8STUDIO-SITE-WORK-PLAN-AND-SCOPE.md](./DEV8STUDIO-SITE-WORK-PLAN-AND-SCOPE.md)
-
-- consolidated digest of the documents above;
-- scope definition (in / out / boundary);
-- work plan, gates, evidence, and traceability back to each source document.
-
-It is a Working Plan, not Governance, and it does not authorize implementation.
-
-## MVP V1 in one picture
+## Current BRM Vertical Slice
 
 ```
-                    Dev8StudioSite
-                          │
-          ┌───────────────┴───────────────┐
-          │                               │
-   Requirement Wizard              Product Showcase
-          │                               │
-          │                         Product Playground
-          │                               │
-          │                         Contextual Capture
-          │                               │
-          └───────────────┬───────────────┘
-                          ↓
-                  Requirement Set
-                          ↓
-               Wizard OR Direct Submit
-                          ↓
-                 BRM-compatible Record
-                          ↓
-                  Dev8Studio Review
+Product
+  ↓
+Critical Journey
+  ↓
+Operational Evidence
+  ↓
+Incident
+  ↓
+Related Evidence + Context
+  ↓
+AI Analysis
+  ↓
+Human Decision
+  ↓
+Action / Fix
+  ↓
+Verification Evidence
+  ↓
+Resolved
+  ↓
+Learning
 ```
 
-## Implementation status
+## Public Site Boundary
 
-The current repository is a Product / Website Concept repository rather than a verified application runtime. The MVP implementation therefore starts with **Reconcile → Foundation → Vertical Slice → Evidence**.
+The public Dev8StudioSite is primarily a product gateway.
 
-No claim of a working production application should be made until the actual application scaffold, runtime, tests, persistence, and customer journey have been verified.
+The Home direction is:
+- modern;
+- polished;
+- premium;
+- simple;
+- product-led.
 
-## Next implementation step
+The two primary product stories are:
+- **Secretary**
+- **Meow World**
 
-**Gate 0 — Reconcile the repository**
+When genuinely available, product CTAs may route users to the appropriate App Store / Play Store destination.
 
-Verify the actual implementation repository/scaffold and approved Governance before adding application code.
+BRM remains behind the scenes.
 
-Then implement the smallest vertical slice:
+## Core Rules
 
-```
-Context
-  ↓
-Requirement Capture
-  ↓
-Requirement Set
-  ↓
-Submit
-  ↓
-Receipt
-```
+> BRM must help the human before it tries to replace the human.
 
-Only after that contract is proven should the Playground and Wizard be connected.
+> Evidence proves what happened; Evidence does not automatically become Requirement.
 
-## Core rules
+> AI may infer, but BRM must remember what was inferred.
+
+> Human authority remains explicit.
 
 > Build Small — Design for Extension.
 
 > Design for the future, Build for the present.
-
-> Capture everything. Commit only what we understand.
 
 > Build the Core, Integrate the Ecosystem — Reliably.
 
