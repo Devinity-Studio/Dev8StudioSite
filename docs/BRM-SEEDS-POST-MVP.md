@@ -1,46 +1,72 @@
-# BRM Seeds — Post MVP V1
+# BRM Seeds — Post Operations Core
 
 > Seed register — not approved implementation scope
 
-These are architectural/product seeds identified while designing MVP V1. They should be evaluated after the MVP vertical slice is proven.
+The previous customer-facing BRM MVP is no longer the first priority.
 
-## S1 — BRM Context / Idea Layer + Structured Layer
+The current First Priority is:
 
-**Status:** Architectural Seed  
-**Purpose:** separate raw/early thinking from promoted, structured BRM information.
+> **BRM Operations Core — internal tooling for Dev8Studio to operate launched products through Human ↔ AI collaboration.**
+
+The seeds below are evaluated only after the Operations Core has been proven, unless separately promoted through the appropriate planning / Governance process.
+
+## S1 — Requirement Management Layer
+
+**Status:** Future Module
+
+Bring the earlier customer-facing BRM concepts into the operational core:
+
+- Requirement Wizard;
+- Contextual Requirement Capture;
+- Requirement Set;
+- Requirement clarification;
+- Requirement → Feature → Test → Evidence traceability.
+
+Boundary:
+
+> Evidence can create an observation or candidate problem, but it does not automatically become a Requirement.
+
+## S2 — Context / Idea + Structured Layer
+
+**Status:** Architectural Layer
+
+Separate early thinking from promoted structured information:
 
 ```
-Conversation
-  ↓
 Context / Idea
   ↓
 Understand / Clarify
   ↓
-Human review
+Human Review
   ↓
 Structured BRM
 ```
 
-## S2 — Super Brain + Best Friend Interface
+The earlier two-layer design remains valid.
 
-**Status:** Future Module  
-**Purpose:** allow the human and Super Brain to work inside BRM using bounded Context.
+## S3 — Super Brain + Best Friend Interface
 
-Capabilities:
+**Status:** Future Module
+
+Allow Human ↔ AI work inside BRM using bounded Context.
+
+Capabilities may include:
 
 - conversation;
 - Context understanding;
 - clarification;
 - challenge;
 - summarization;
+- recommendation;
 - promotion proposal.
 
 The assistant is not the Source of Truth.
 
-## S3 — Project Room
+## S4 — Project Room
 
-**Status:** Future Module  
-**Purpose:** establish a Project Context Boundary containing project-specific:
+**Status:** Future Module
+
+Project-specific Context Boundary containing:
 
 - Current State;
 - Principles;
@@ -52,31 +78,15 @@ The assistant is not the Source of Truth.
 - Decisions;
 - external integrations.
 
-## S4 — Project Lifecycle + GitHub Orchestration
+## S5 — Project Lifecycle + GitHub Orchestration
 
 **Status:** Future Integration / Architecture Seed
 
-Concept:
+BRM may later create or link project/repository context and synchronize operational Evidence.
 
-```
-BRM Project
-  ↓
-Create / Link Project Room
-  ↓
-Create / Link GitHub Repo
-  ↓
-Connect team / permissions
-  ↓
-Development
-  ↓
-Sync status / evidence
-```
+GitHub remains authoritative for GitHub permissions and Git operations.
 
-GitHub remains authoritative for GitHub repository permissions and Git operations.
-
-BRM should use provider adapters rather than implement Git itself.
-
-## S5 — Developer Workbench
+## S6 — Developer Workbench
 
 **Status:** Future Module
 
@@ -91,7 +101,7 @@ Potential capabilities:
 - impact analysis;
 - evidence collection.
 
-## S6 — Multi-Agent Orchestration
+## S7 — Multi-Agent Orchestration
 
 **Status:** Future Module
 
@@ -106,20 +116,20 @@ Potential agents:
 
 BRM provides shared Context and contracts. Agents do not replace BRM authority.
 
-## S7 — Graphic Coding
+## S8 — Graphic Coding
 
 **Status:** Future Module
 
-Purpose: make system structure and behavior understandable/constructible through visual representations while preserving traceability to BRM.
+Make system structure and behavior understandable / constructible through visual representations while preserving traceability.
 
-## S8 — Advanced Traceability / Impact Analysis
+## S9 — Advanced Traceability / Impact Analysis
 
 **Status:** Future Module
 
-Potential direction:
+Potential relationship:
 
 ```
-Business Need
+Need / Problem
  ↕
 Requirement
  ↕
@@ -134,9 +144,7 @@ Test
 Evidence
 ```
 
-Changes should be able to reveal affected downstream or upstream records.
-
-## S9 — External Tool Ecosystem
+## S10 — External Tool Ecosystem
 
 **Status:** Architecture Seed
 
@@ -148,11 +156,34 @@ Potential integrations:
 - Supabase;
 - future providers.
 
-Principle:
+Use adapters so external providers do not become the semantic Source of Truth.
 
-> Build the Core, Integrate the Ecosystem — Reliably.
+## S11 — Knowledge Compounding / Safe Automation
 
-Use adapters/contracts so an external provider can evolve or be replaced without changing BRM's semantic core.
+**Status:** Future Module
+
+Use resolved incidents and verified operational patterns to improve:
+
+- diagnosis;
+- recommendations;
+- support responses;
+- safe automation.
+
+Automation should be earned through repeated Evidence.
+
+## S12 — External BRM Product
+
+**Status:** Long-term possibility
+
+Only consider exposing BRM externally after internal use demonstrates that it reliably creates value for Dev8Team.
+
+Possible paths:
+
+- internal-only operating system for Dev8Team;
+- team product;
+- public BRM product.
+
+No decision is required now.
 
 ## Prioritization Rule
 
@@ -160,13 +191,13 @@ Do not prioritize Seeds by excitement alone.
 
 Evaluate:
 
-1. Customer Need
+1. Internal operational need
 2. Evidence
-3. Business Value
-4. Architecture Readiness
-5. Dependency on MVP
-6. Operational / Security Cost
-7. Replaceability / Integration Risk
+3. Business value
+4. Architecture readiness
+5. Dependency on Operations Core
+6. Operational / Security cost
+7. Replaceability / integration risk
 
 ## Seed Lifecycle
 
@@ -191,11 +222,3 @@ Released
 ```
 
 A Seed can become **Dormant**, **Rejected**, or **Reframed** without being lost.
-
-## Current Priority Boundary
-
-Before S2–S9, prove MVP V1:
-
-> Requirement Wizard + Showcase + Product Playground + Contextual Requirement Capture + Requirement Set + submission evidence.
-
-Only proven seams should become foundations for the next branch.
