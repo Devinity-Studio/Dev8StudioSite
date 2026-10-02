@@ -1,6 +1,12 @@
-# Dev8StudioSite — MVP V1 Implementation Blueprint
+# Dev8StudioSite — MVP V1 Implementation Blueprint (Superseded)
 
-> Working Product + Implementation Plan — not Governance
+> Historical Working Product + Implementation Plan — not Governance
+
+> **Status (2026-10-02): SUPERSEDED as First Priority.**
+>
+> The customer-facing Requirement Management MVP described here is preserved as design history and as a later BRM layer. The current first BRM MVP is `docs/BRM-MVP-V2-OPERATIONS-CORE.md`, focused on internal Product Operations, Evidence, Incident handling, AI Analysis, Human Decision, Verification, and Learning.
+>
+> Do not treat this document as the current implementation priority.
 
 ## 1. MVP V1 Goal
 
