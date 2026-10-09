@@ -1,91 +1,184 @@
 # BRM Stable Modular & AI-Native Studio Platform
 
+**Document Type:** Future Architecture Direction  
+**Status:** Conceptual — Not Authorized for Implementation  
+**Current Priority:** BRM Operations Core
+
+---
+
 ## 1. Vision
 
-BRM is intended to provide a stable, evidence-driven operational core that can support different types of Products and creative work without being tightly coupled to any specific AI provider, tool, or production technology.
+BRM is intended to provide a stable, evidence-driven operational core for managing Products, Requirements, execution, verification, incidents, decisions, and feedback.
 
-The same common process may support application development, website development, image creation, audio production, video production, and small games.
+The core should remain independent of any specific AI provider, production tool, or technology. Specialized capabilities should be connected through replaceable Modules rather than embedded directly into the core.
 
-The objective is not to make every workflow identical. It is to establish a stable common foundation while allowing each work type to use its own specialized Modules.
+This architecture may eventually support multiple types of work, including:
 
-## 2. Common Process
+- Application and website development
+- Image generation and visual design
+- Voice and audio production
+- Video production and editing
+- Game development and interactive experiences
+- Other specialized creative and technical workflows
 
-The shared operational lifecycle can follow:
+The objective is not to force every type of work into an identical workflow. It is to establish a consistent operational foundation while allowing each work type to use the Modules, processes, and verification methods appropriate to its needs.
+
+## 2. Common Operational Lifecycle
+
+The shared operational lifecycle is:
 
 **Requirement → Plan & Acceptance Criteria → Execute → Verify & Evidence → Deliver → Feedback & Learn**
 
-BRM manages the relationship between the original Requirement, execution, decisions, results, and Evidence.
+Each stage has a distinct responsibility:
 
-Each work type may extend this lifecycle with specialized steps and verification rules.
+1. **Requirement:** Define the intended outcome, user need, and scope.
+2. **Plan & Acceptance Criteria:** Determine the deliverables and the conditions required for success.
+3. **Execute:** Perform the work using an appropriate workflow and specialized Modules.
+4. **Verify & Evidence:** Evaluate the actual results against the Acceptance Criteria and record supporting Evidence.
+5. **Deliver:** Provide the verified deliverables and their relevant records.
+6. **Feedback & Learn:** Capture feedback, actual outcomes, incidents, and lessons that may improve future work.
 
-## 3. Stable Core & Replaceable Modules
+BRM should maintain traceability between the original Requirement, the decisions made, the work performed, the resulting Evidence, and the final outcome.
 
-### Stable Core
+This lifecycle is a common foundation, not a requirement that every workflow must contain exactly the same technical steps. Specialized workflows may extend it with additional stages and verification rules.
 
-The common foundation may include:
+## 3. Architecture: Stable Core & Replaceable Modules
 
-- Requirement and scope management
-- Acceptance Criteria
-- Work status and traceability
-- Evidence and verification
-- Incident and decision management
-- Delivery records and Feedback
+### 3.1 Stable Core
 
-### Replaceable Modules
+The Stable Core is the common operational foundation.
 
-Specialized Modules may handle:
+Its conceptual responsibilities include:
 
-- Code and application development
-- Website production
-- Image generation and visual design
-- Voice and audio production
-- Video generation, editing, and assembly
-- Game development and interactive assets
-- Quality checks specific to each output type
+- **Requirement & Scope:** Record what needs to be achieved and what is included or excluded.
+- **Acceptance Criteria:** Define how successful completion will be evaluated.
+- **Work Status & Traceability:** Track progress and maintain relationships between Requirements, work, decisions, and results.
+- **Evidence & Verification:** Record verification outcomes and the Evidence supporting them.
+- **Incident & Decision Management:** Capture problems, relevant facts, decisions, and follow-up actions.
+- **Delivery & Feedback:** Record what was delivered, the delivery outcome, and feedback received.
 
-Modules should have clear responsibilities, defined inputs and outputs, and explicit verification criteria. Replacing one Module should minimize unnecessary changes to the Stable Core.
+These are proposed architectural responsibilities, not a claim that every capability has already been implemented.
+
+### 3.2 Replaceable Modules
+
+Replaceable Modules provide specialized capabilities for different types of work.
+
+Potential Modules include:
+
+- **Software Module:** Code, application development, and technical testing.
+- **Website Module:** Website production and web-specific verification.
+- **Visual Module:** Image generation, graphic design, and visual assets.
+- **Audio Module:** Voice production, sound effects, and audio editing.
+- **Video Module:** Video generation, editing, assembly, and final rendering.
+- **Game Module:** Game development, interactive assets, and gameplay verification.
+- **Quality Assurance Modules:** Specialized checks appropriate to each output type.
+
+Each Module should have clearly defined:
+
+- Responsibilities and boundaries
+- Required inputs and expected outputs
+- Dependencies and integration points
+- Verification methods and Acceptance Criteria
+- Failure handling and Evidence requirements
+
+Replacing or upgrading a Module should minimize unnecessary changes to the Stable Core.
+
+The objective is to allow tools and production methods to evolve independently while preserving the common operational foundation.
 
 ## 4. Future Direction: BRM + Ad Agency Studio Platform
 
-A future Ad Agency Studio Platform may connect to BRM and coordinate specialized AI tools according to each customer's Requirement.
+A future Ad Agency Studio Platform may use BRM as its operational foundation and coordinate specialized tools and production workflows according to each customer's Requirements.
 
-A potential workflow:
+A potential workflow is:
 
-1. Receive the customer's Requirement through BRM.
-2. Define the expected deliverables and Acceptance Criteria.
-3. Select an appropriate production workflow and specialized tools.
-4. Execute the workflow through the Studio Platform.
-5. Verify the outputs against the Requirement.
-6. Deliver the work and capture Evidence.
-7. Feed customer Feedback and actual outcomes back into BRM.
+1. Capture the customer's Requirement through BRM.
+2. Define the expected deliverables, scope, and Acceptance Criteria.
+3. Select a suitable production workflow and specialized Modules.
+4. Execute the work through the Studio Platform.
+5. Verify the outputs against the agreed Acceptance Criteria.
+6. Deliver the verified work and record the relevant Evidence.
+7. Capture customer Feedback and actual outcomes for future learning.
 
-For example, a video advertisement workflow could use one Module for visuals, another for Thai voice production, another for accurate UI and Context Cards, and an assembly workflow for editing, sound effects, and final delivery.
+### Example: Video Advertisement Production
+
+A video advertisement may require several specialized Modules:
+
+- **Visual Production:** Create or select suitable visual assets.
+- **Thai Voice Production:** Produce and verify Thai narration.
+- **UI & Context Card Production:** Prepare interface visuals and text, checking that wording and layout are accurate.
+- **Video Assembly:** Combine visuals, narration, sound effects, timing, and transitions.
+- **Final Quality Assurance:** Check the complete video against the agreed deliverables and Acceptance Criteria.
+
+The workflow should verify each important component and the assembled result. A successful output from an individual Module does not automatically prove that the final deliverable is correct.
+
+This example illustrates a possible future workflow. It does not authorize development of the Studio Platform or require all these Modules to be built now.
 
 ## 5. Guiding Principles
 
-- **Stable Core, Replaceable Modules.**
-- Requirements define success; Evidence demonstrates whether success was achieved.
-- Select tools based on demonstrated suitability, quality, cost, and reliability.
-- Do not assume every AI tool is suitable for every task.
-- Human review remains available wherever quality, safety, or business decisions require it.
-- Build reusable workflows from real usage and verified outcomes, not assumptions.
+- **Stable Core, Replaceable Modules:** Preserve a consistent operational foundation while allowing specialized capabilities to evolve independently.
+- **Requirements Define Success; Evidence Demonstrates Results:** Do not treat assumptions, plans, or AI-generated claims as proof of successful completion.
+- **Suitability Before Tool Selection:** Choose tools based on demonstrated suitability, quality, cost, and reliability.
+- **Verification Before Delivery:** Check the actual output against the Acceptance Criteria.
+- **Human Oversight:** Keep human review and decision-making available wherever quality, safety, or business judgment requires it.
+- **Evidence Before Expansion:** Verify a complete workflow before extending it to additional work types or Modules.
+- **Experience-Driven Improvement:** Improve workflows using real usage, verified outcomes, incidents, and feedback rather than assumptions.
+- **Business Value Before Platform Complexity:** Build capabilities to solve demonstrated customer problems, not merely to increase technical sophistication.
 
 ## 6. Scope & Governance
 
-This document records a future architectural direction. It does not authorize Production Code, a public-facing BRM, or development of the Ad Agency Studio Platform.
+This document records a future architectural direction only.
 
-The current priority remains the BRM Operations Core.
+It does not authorize:
 
-Any implementation must follow:
+- Production Code implementation
+- A public-facing BRM
+- Development of the Ad Agency Studio Platform
+- Autonomous changes to Products or production systems
+- Expansion of the current scope without an explicit decision
+
+**The current First Priority remains the BRM Operations Core.**
+
+Work must follow the established sequence:
 
 **Reconcile → Foundation → Vertical Slice → Evidence**
 
-Begin with one small, representative workflow. Verify the complete path from Requirement to Evidence before expanding to additional Modules or work types.
+### Implementation Gate
+
+Before considering any future implementation:
+
+1. Reconcile the proposal against the current source documents, repository state, and Governance.
+2. Confirm the scope and prerequisites.
+3. Complete the authorized Foundation work.
+4. Implement one small, representative Vertical Slice only when authorized.
+5. Verify the complete path from Requirement to Evidence.
+6. Review the results before deciding whether to expand the scope.
+
+A proposed architecture, a written plan, or a successful isolated test does not by itself authorize broader implementation.
 
 ## 7. Business Validation
 
-The future platform must be justified by real customer needs and sustainable economics.
+The future platform must be justified by demonstrated customer needs and sustainable economics.
 
-Tool orchestration and modularity are means to deliver customer value; they are not evidence of market demand by themselves.
+Tool orchestration, modular architecture, and automation are methods for delivering value. They are not, by themselves, evidence of market demand or willingness to pay.
 
-Prioritize suitable work, validate willingness to pay, deliver successfully, and learn from real outcomes before investing in a larger platform.
+Business validation should prioritize:
+
+1. Identifying a suitable customer problem.
+2. Confirming the expected value and deliverables.
+3. Testing willingness to pay where appropriate.
+4. Delivering the agreed work successfully.
+5. Recording actual revenue, costs, quality, and customer feedback.
+6. Using the results to decide whether further investment is justified.
+
+The platform should grow only when real outcomes support the decision to invest more time, complexity, and operating cost.
+
+## 8. Relationship to Current Work
+
+This proposal is a future direction, not a change to the current project priority.
+
+The immediate objective remains to establish a usable, evidence-driven BRM Operations Core. Future Modules and the Ad Agency Studio Platform should be considered only when they are consistent with the current Governance and justified by demonstrated needs.
+
+**Architecture Direction:** Stable Core + Replaceable Modules  
+**Operational Principle:** Requirement → Execution → Verification → Evidence  
+**Current Priority:** BRM Operations Core  
+**Implementation Status:** Not Authorized
