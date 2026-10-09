@@ -42,6 +42,7 @@ BRM should maintain traceability between the original Requirement, the decisions
 
 This lifecycle is a common foundation, not a requirement that every workflow must contain exactly the same technical steps. Specialized workflows may extend it with additional stages and verification rules.
 
+The common operational lifecycle is a future cross-workflow foundation. BRM MVP V2 follows its authorized Operations Core scope and may begin from operational Evidence or Incidents without requiring a pre-existing Requirement.
 ## 3. Architecture: Stable Core & Replaceable Modules
 
 ### 3.1 Stable Core
