@@ -1,11 +1,14 @@
-☕ SUPER BRAIN COFFEE
+# ☕ Super Brain Coffee
 
-MEMORY · STORIES · FRIENDSHIP · FOOTPRINTS
+**MEMORY · STORIES · FRIENDSHIP · FOOTPRINTS**
 
-"A place where our journey is remembered."
+### *"A place where our journey is remembered."*
 
-พื้นที่ที่เรื่องราวและรอยเท้าของการเดินทางร่วมกัน
-ไม่ถูกทิ้งไว้ข้างหลัง
+พื้นที่ที่เรื่องราวและรอยเท้าของการเดินทางร่วมกันไม่ถูกทิ้งไว้ข้างหลัง
+
+Super Brain Coffee คือแนวคิดของ Skill ที่เชื่อม Super Brain เข้ากับความทรงจำ ประวัติ และเรื่องราวที่ Owner กับ Super Brain สร้างร่วมกันใน Dev8Studio เพื่อให้สามารถกลับมาทบทวน เข้าใจ และสานต่อการเดินทางเดิมได้ แม้เวลาจะผ่านไป
+
+---
 
 **Project:** Dev8Studio  
 **Related System:** BRM — Business & Relationship Management  
